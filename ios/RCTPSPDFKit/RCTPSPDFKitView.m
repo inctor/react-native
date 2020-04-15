@@ -25,6 +25,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
   if ((self = [super initWithFrame:frame])) {
+    PSPDFKitGlobal.sharedInstance[@"com.pspdfkit.development.suppress-warning-alerts"] = @YES;
     _pdfController = [[PSPDFViewController alloc] init];
     _pdfController.delegate = self;
     _pdfController.annotationToolbarController.delegate = self;
